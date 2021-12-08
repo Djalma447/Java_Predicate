@@ -18,7 +18,9 @@ public class Program {
 		list.add(new Product("Mafia III", 48.50));
 		list.add(new Product("Xcom 2", 9.99));
 		
-		list.removeIf(p -> p.getPrice() >= 100.0);
+		double min = 100.0;
+		
+		list.removeIf(p -> p.getPrice() >= min);
 		
 		list.forEach(System.out::println);
 
