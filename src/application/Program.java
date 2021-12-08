@@ -2,7 +2,6 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 import entities.Product;
 
@@ -19,9 +18,7 @@ public class Program {
 		list.add(new Product("Mafia III", 48.50));
 		list.add(new Product("Xcom 2", 9.99));
 		
-		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
-		
-		list.removeIf(pred);
+		list.removeIf(p -> p.getPrice() >= 100.0);
 		
 		list.forEach(System.out::println);
 
